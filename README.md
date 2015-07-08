@@ -26,4 +26,4 @@ Source code, Ruby, Gems:
 License
 ------------
 
-[GPL v.2](https://travis-ci.org/che/magenete)
+[GPL v.2](https://gnu.org/licenses/old-licenses/gpl-2.0-standalone.html)
