@@ -1,6 +1,7 @@
 Conference engine
 =========
 
+
 Originally it was created for support [LVEE conference](http://lvee.org)
 
 Now it is been rewriting to support running any conference.
@@ -25,7 +26,8 @@ RVM (Ruby Version Manager):
 
 Source code, Ruby, Gems:
 
-    git clone git@github.com:lvee-conference/lvee.git
+    git clone https://github.com/lvee-conference/lvee/
+    cd ./lvee/
     rvm install $(cat .ruby-version)
     rvm use $(cat .ruby-version)
     bundle install
@@ -35,5 +37,6 @@ Source code, Ruby, Gems:
 
 License
 ------------
+
 
 [GPL v.2](https://gnu.org/licenses/old-licenses/gpl-2.0-standalone.html)
