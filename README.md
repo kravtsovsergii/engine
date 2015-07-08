@@ -6,8 +6,15 @@ Originally it was created for support [LVEE conference](http://lvee.org)
 Now it is been rewriting to support running any conference.
 
 
+
+
 Installation
 ------------
+
+
+System:
+    sudo apt-get install git curl
+
 
 RVM (Ruby Version Manager):
 
@@ -15,12 +22,15 @@ RVM (Ruby Version Manager):
     curl -sSL https://get.rvm.io | bash -s stable
     source ~/.rvm/scripts/rvm
 
+
 Source code, Ruby, Gems:
 
     git clone git@github.com:lvee-conference/lvee.git
     rvm install $(cat .ruby-version)
     rvm use $(cat .ruby-version)
     bundle install
+
+
 
 
 License
