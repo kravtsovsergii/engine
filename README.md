@@ -27,10 +27,10 @@ RVM (Ruby Version Manager):
 
 Source code, Ruby, Gems:
 
-    git clone https://github.com/lvee-conference/lvee/
-    cd ./lvee/
-    rvm install $(cat .ruby-version)
-    rvm use $(cat .ruby-version)
+    git clone https://github.com/lvee-conference/lvee
+    cd ./lvee
+    rvm install $(cat ./.ruby-version)
+    rvm use $(cat ./.ruby-version)
     bundle install
 
 
