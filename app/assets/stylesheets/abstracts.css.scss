@@ -1,0 +1,128 @@
+#comments {
+    list-style: none outside none;
+    padding:0px;
+    marging: 0px;
+    li.comment {
+        margin-top: 5px;
+        padding: 0;
+    }
+    .user_comment {
+        .author {
+            float: left;
+            display: inline;
+        }
+        .body {
+            background: url(../images/bg-comment-user.png) no-repeat scroll 0 0 transparent;
+            float: left;
+            display: inline;
+        }
+    }
+    .reviewer_comment {
+        .author {
+            float: right;
+        }
+        .body {
+            background: url(../images/bg-comment-revewer.png) no-repeat scroll 0 0 transparent;
+            float: right;
+        }
+    }
+    .author {
+        width: 100px;
+        text-align: center;
+        .name {font-weight: bold;}
+    }
+    .body {
+        padding-left: 10px;
+        width: 440px;
+    }
+    .end {clear:both;}
+}
+
+
+textarea#abstract_summary {
+    height: 100px;
+}
+
+.authors {text-align: center}
+.summary {font-style: italic}
+.conference {text-align: center; font-weight: bold}
+
+.field {
+   width: 570px;
+   clear: both;
+   margin-bottom: 1em;
+}
+
+form.abstracts, form.abstracts-add {
+   .field {
+      input,textarea {
+         clear: both;
+         width: 560px;
+      }
+      label: {
+         padding-right: 1em;
+         display: inline-block;
+      }
+      textarea {
+         clear: both;
+         width: 560px
+      }
+      input.checkbox{
+         clear: none;
+      }
+      input.no-size {
+         width: auto;
+         clear: none;
+      }
+   }
+
+   .actions {
+      padding: 1em 0;
+   }
+   .description {
+      padding: 0;
+   }
+}
+
+#user_dialog {
+   #user_list_outer {
+      overflow-y: scroll;
+      height: 400px;
+   }
+   ol {
+      list-style:none;
+      width: 100%;
+      padding: 0;
+      li {
+         width: 250px;
+         height: 80px;
+         border: 1px solid gray;
+         float:left;
+         margin: 5px 0 0 5px;
+         padding: 5px;
+         img {
+            float: left;
+            margin: 3px;
+         }
+         span.user-name {
+            font-weight: bold;
+            clear: right;
+            display: block;
+         }
+      }
+      li.ui-selected {
+         background-color: #fffcbb;
+      }
+   }
+   .field {
+      border-bottom: 1px solid gray;
+      margin: 0;
+   }
+}
+
+div.textile {
+   img {
+      margin: 0 5px;
+      vertical-align: text-top;
+   }
+}

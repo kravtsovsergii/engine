@@ -1,0 +1,18 @@
+common: &common
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: P@ssw0rd
+
+development:
+  <<: *common
+  database: lvee_development
+
+test: &common
+  <<: *common
+  database: lvee_test
+
+production: &common
+  <<: *common
+  database: lvee_development

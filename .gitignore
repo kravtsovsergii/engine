@@ -1,0 +1,15 @@
+db/*.sqlite3
+*~
+log/*.log
+*.swp
+tags
+coverage
+semantic.cache
+db/development.sqlite3.save
+config/initializers/google_parameters.rb
+cache
+test/tmp
+nbproject
+public/uploads
+public/assets
+public/sites

@@ -1,0 +1,10 @@
+<%= t("mail.title", :full_name => @user.full_name) %>
+
+<%= t("mail.account.created") %>
+
+<% password = '*' * @user.password.length if @user.password-%>
+<%= t("mail.account.information", :login => @user.login, :password => password) %>
+
+<%= t('mail.account.activate', :url => @url)%>
+
+<%= t("mail.signature") %>

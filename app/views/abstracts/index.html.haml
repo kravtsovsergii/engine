@@ -1,0 +1,48 @@
+%h1= t("label.abstract.list_#{@only}")
+
+%p
+  = t("label.abstract.list_selection")
+  = link_to_unless (@only == "review"), t('label.abstract.for_review'), abstracts_path(only: "review")
+  \|
+  = link_to_unless (@only == "published"), t('label.abstract.published'), abstracts_path(only: "published")
+  \|
+  = link_to_unless (@only == "user"), t('label.abstract.yourself'), abstracts_path(only: 'user')
+
+%table{class: "data"}
+  %thead
+    %tr
+      - unless @limit
+        %th= t("label.abstract.user")
+      %th= t("label.abstract.title")
+      %th= t("label.abstract.updated_at")
+      %th
+      - if admin?
+        %th
+
+  - @abstracts.each do |abstract|
+    %tr{class: cycle("even", "odd") }
+      - unless @limit
+        %td
+          - users = abstract.users
+          - if users.size == 1
+            - u = abstract.users.first
+            = u.full_name
+            = "(#{u.login})" if admin?
+          - else
+            %ul
+              - users.each do |u|
+                %li
+                  = u.full_name
+                  = "(#{u.login})" if admin?
+      %td= abstract.title
+      %td= format_date(abstract.updated_at)
+      %td= link_to t("label.common.show"), abstract
+      - if admin?
+        %td
+          - if abstract.published?
+            = link_to t("label.common.unpublish"), unpublish_abstract_path(abstract), method: "post"
+          - else
+            = link_to t("label.common.publish"), publish_abstract_path(abstract), method: "post"
+
+- unless @actual_conferences.empty?
+  = link_to t("label.abstract.create_new"), new_abstract_path
